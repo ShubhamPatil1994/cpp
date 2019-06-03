@@ -79,15 +79,37 @@ void Camelcase(){
 	cout << count << std::endl;
 }
 
+
+// This function needs to be worked on
 void convert_str_to_int(){
 	std::string str = "12345";
-	int myint = std::stoi(str);
+	// int myint = stoi(str);
+}
+
+
+void occurance(){
+	// check if the string has occured in the given sample
+	string s = "hereiamstackerrank";	// test string
+	string str = "hackerrank";		// original string
+    if (s.length() < str.length())
+        cout << "NO" << std::endl;
+    int j = 0;
+    for (int i = 0; i < s.length(); i++) {
+        if ((j < str.length()) && (s[i] == str[j]))
+            j++;
+        }
+    if (j==str.length())
+    	cout << "YES" << std::endl;
+    else
+        cout << "NO" << std::endl;
+    //return (j==str.length())?"YES":"NO";
 }
 
 int main(){
 	// anagram();		//Check if string can be rearranged to palindrome
 	// only_chars();		//Check if the string contains only digits
 	// Camelcase();		//Check the number of words in Camelcase
-	convert_str_to_int();	//Convert string int to int 
+	// convert_str_to_int();	//Convert string int to int 
+	occurance();		//Check if one string occurs in another string
 	return 0;
 }
